@@ -1,13 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/zufar.css" />
-    <style type="text/tailwindcss"></style>
-    <title>Zufar</title>
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </body>
+    <title>ZUFAR CREW</title>
+    <link rel="stylesheet" href="css/zufar.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+    
+    <style>
+        .font-bellefair { font-family: 'Bellefair', serif; }
+        .font-barlow-condensed { font-family: 'Barlow Condensed', sans-serif; }
+        .bg-deep-dark {
+            background-color: #0B0D17; 
+            position: relative;
+            z-index: 1; 
+        }
+        .bg-deep-dark::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.2); 
+            z-index: -1;
+        }
+        .nav-divider {
+            position: absolute;
+            left: 120px; 
+            width: calc(100% - 40rem); 
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.2);
+            z-index: 10;
+        }
+        h1 {
+            letter-spacing: 4px;
+        }
+        @media (min-width: 1024px) {
+            .image-wrapper {
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-deep-dark text-white min-h-screen flex flex-col font-barlow-condensed"
+    style="background-image: url('images/bagr.sarvar.svg'); background-size: cover; background-position: center;"
+>
+    <!-- HEADER -->
+    <header class="flex items-center justify-between pl-6 md:pl-12 pr-0 py-6 relative">
+        <div class="flex items-center space-x-4 z-20">
+            <img src="images/logo_sarvar.svg" alt="Logo" class="w-10 h-10" />
+        </div>
+
+        <div class="hidden lg:block nav-divider"></div>
+
+        <nav class="flex items-center h-24 bg-white/5 backdrop-blur-xl space-x-4 md:space-x-8 px-4 md:px-16">
+            <a href="#" class="uppercase tracking-widest text-sm text-gray-300 h-full flex items-center hover:border-b-2 border-white/50 transition-all">
+                <span class="hidden lg:inline font-bold mr-1">00</span> HOME
+            </a>
+            <a href="./moon.html" class="uppercase tracking-widest text-sm text-gray-300 h-full flex items-center hover:border-b-2 border-white/50 transition-all">
+                <span class="hidden lg:inline font-bold mr-1">01</span> DESTINATION
+            </a>
+            <a href="#" class="uppercase tracking-widest text-sm text-white border-b-2 border-white h-full flex items-center transition-all">
+                <span class="hidden lg:inline font-bold mr-1">02</span> CREW
+            </a>
+            <a href="#" class="uppercase tracking-widest text-sm text-gray-300 h-full flex items-center hover:border-b-2 border-white/50 transition-all">
+                <span class="hidden lg:inline font-bold mr-1">03</span> TECHNOLOGY
+            </a>
+        </nav>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main class="flex flex-col lg:flex-row lg:items-end justify-between px-6 md:px-16 lg:px-24 flex-grow">
+        <!-- LEFT TEXT -->
+        <div class="text-center lg:text-left lg:w-1/2 space-y-4 lg:pb-20 pt-10 lg:pt-0 order-2 lg:order-1 z-10">
+            <h2 class="uppercase text-white/70 tracking-[4.75px] text-lg md:text-xl lg:mb-20">
+                <span class="font-bold mr-2 opacity-50">02</span> MEET YOUR CREW
+            </h2>
+
+            <h3 class="uppercase text-white/50 font-bellefair text-xl md:text-3xl tracking-widest">
+                Commander
+            </h3>
+
+            <!-- BIG NAME -->
+            <h1 class="uppercase text-white font-bellefair text-7xl md:text-8xl lg:text-[10rem] leading-none pt-2 pb-4 tracking-widest">
+                ZUFAR
+            </h1>
+
+            <p class="text-gray-300 font-barlow-condensed leading-relaxed max-w-sm lg:max-w-md mx-auto lg:mx-0 text-base">
+                Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. 
+                He launched into space for the third time as commander of Crew Dragon Demo-2.
+            </p>
+
+            <div class="flex justify-center lg:justify-start space-x-3 pt-10 md:pt-16 lg:pt-20 pb-10 lg:pb-0">
+                <div class="w-3 h-3 rounded-full bg-white opacity-100 cursor-pointer"></div>
+                <div class="w-3 h-3 rounded-full bg-white opacity-25 hover:opacity-50 cursor-pointer"></div>
+                <div class="w-3 h-3 rounded-full bg-white opacity-25 hover:opacity-50 cursor-pointer"></div>
+                <div class="w-3 h-3 rounded-full bg-white opacity-25 hover:opacity-50 cursor-pointer"></div>
+            </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2 w-full image-wrapper">
+            <div class="w-full flex justify-center items-end">
+                <img src="images/man.sarvar.png" alt="Crew Member"
+                     class="w-full max-w-xs md:max-w-md lg:max-w-none object-contain h-auto lg:h-[80vh]" />
+            </div>
+        </div>
+    </main>
+</body>
 </html>

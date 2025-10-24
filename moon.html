@@ -1,15 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="stylesheet" href="./css/moon.css" />
-    <style type="text/tailwindcss"></style>
+    <link rel="icon" href="./images/logo.svg">
     <title>Moon</title>
-  </head>
-  <body>
-    <h2>Nima gap</h2>
-    <h1>sardor tugadi</h1>
+</head>
+<body class="bg-destination min-h-screen text-white pt-10 px-6 md:px-10 lg:px-20 font-['Barlow_Condensed']">
+
+    <header class="flex justify-between items-center relative">
+        <div class="logo-placeholder ml-4">
+            <img src="./images/logo.svg" alt="Space Tourism Logo" class="w-10 h-10">
+        </div>
+        
+        <div class="hidden lg:block absolute left-28 h-px w-[35%] bg-white opacity-25 z-10"></div>
+        
+        <nav class="nav-bg-blur text-sm tracking-[2.7px] uppercase flex space-x-8 md:space-x-12 p-6 md:pr-36">
+            <a href="#" class="pb-6 border-b-2 border-transparent hover:border-gray-500 transition duration-300">
+                <span class="font-bold mr-2 hidden sm:inline">00</span> Home
+            </a>
+            <a href="./moon.html" class="pb-6 border-b-2 hover:border-gray-500 transition duration-300">
+                <span class="font-bold mr-2 hidden sm:inline">01</span> Destination
+            </a>
+            <a href="./zufar.html" class="pb-6 border-b-2 border-transparent hover:border-gray-500 transition duration-300">
+                <span class="font-bold mr-2 hidden sm:inline">02</span> Crew
+            </a>
+            <a href="#" class="pb-6 border-b-2 border-transparent hover:border-gray-500 transition duration-300">
+                <span class="font-bold mr-2 hidden sm:inline">03</span> Technology
+            </a>
+        </nav>
+    </header>
+
+    <main class="pt-16 lg:pt-20">
+        <h1 class="text-lg md:text-2xl uppercase tracking-[4.75px] ml-4 mb-16 md:mb-20">
+            <span class="text-gray-500 font-bold mr-4 opacity-50">01</span> Pick your destination
+        </h1>
+
+        <div class="grid lg:grid-cols-2 gap-y-10 lg:gap-x-32 items-center text-center lg:text-left">
+            <div class="flex justify-center">
+                <img src="./images/yellow.moon.png" alt="Moon" class="w-[50%] max-w-sm" /> 
+            </div>
+            
+            <div>
+                <nav class="flex justify-center lg:justify-start space-x-6 text-base tracking-[2.35px] uppercase text-gray-400 mb-8">
+                    <div class="planet relative">
+                        <a href="#" class="pb-2 border-b-2 border-white text-white">Moon</a>
+                        <div class="planet-info absolute top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-sm p-3 rounded-lg w-48 text-center shadow-lg">
+                            <p>Distance: 384,400 KM</p>
+                            <p>Travel: 3 DAYS</p>
+                        </div>
+                    </div>
+                    <div class="planet relative">
+                        <a href="#" class="pb-2 border-b-2 border-transparent hover:border-gray-500">Mars</a>
+                        <div class="planet-info absolute top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-sm p-3 rounded-lg w-48 text-center shadow-lg">
+                            <p>Distance: 225 MIL. KM</p>
+                            <p>Travel: 9 MONTHS</p>
+                        </div>
+                    </div>
+                    <div class="planet relative">
+                        <a href="#" class="pb-2 border-b-2 border-transparent hover:border-gray-500">Europa</a>
+                        <div class="planet-info absolute top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-sm p-3 rounded-lg w-48 text-center shadow-lg">
+                            <p>Distance: 628 MIL. KM</p>
+                            <p>Travel: 3 YEARS</p>
+                        </div>
+                    </div>
+                    <div class="planet relative">
+                        <a href="#" class="pb-2 border-b-2 border-transparent hover:border-gray-500">Titan</a>
+                        <div class="planet-info absolute top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-sm p-3 rounded-lg w-48 text-center shadow-lg">
+
+                            <p>Distance: 1.6 BIL. KM</p>
+                            <p>Travel: 7 YEARS</p>
+                        </div>
+                    </div>
+                </nav>
+
+                <h2 class="font-['Bellefair'] text-7xl md:text-[5rem] lg:text-[6.25rem] uppercase mb-4">
+                    MOON
+                </h2>
+
+                <p class="text-[#D0D6F9] leading-relaxed max-w-lg mx-auto lg:mx-0 mb-12">
+                    See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+                </p>
+
+                <div class="h-px w-full bg-white opacity-25 mb-8"></div>
+
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start space-y-6 sm:space-y-0 sm:space-x-12 uppercase">
+                    <div class="space-y-2">
+                        <p class="text-[#D0D6F9] text-sm tracking-[2.35px]">Avg. Distance</p>
+                        <p class="font-['Bellefair'] text-3xl md:text-[1.75rem]">384,400 KM</p>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <p class="text-[#D0D6F9] text-sm tracking-[2.35px]">Est. Travel Time</p>
+                        <p class="font-['Bellefair'] text-3xl md:text-[1.75rem]">3 DAYS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </body>
+</body>
 </html>
